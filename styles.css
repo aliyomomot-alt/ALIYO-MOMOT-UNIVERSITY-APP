@@ -1,0 +1,565 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4a1a1a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Page Management */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Landing Page */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.header-shapes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.shape {
+    width: 40px;
+    height: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.shape.triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #ff6600;
+}
+
+.shape.square {
+    background-color: #0033cc;
+}
+
+.shape.circle {
+    border-radius: 50%;
+    background-color: #ffcc00;
+}
+
+.shape.pentagon {
+    background-color: #00cc66;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    font-style: italic;
+}
+
+/* Pathway Selection */
+.pathway-selection {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.pathway-selection h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.pathway-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pathway-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 5px solid #0033cc;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pathway-btn:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 51, 204, 0.5);
+}
+
+.pathway-btn:active {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Pathway Container */
+.pathway-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #5a2a2a;
+    border: 8px solid #0033cc;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Screws */
+.screw {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 30%, #666666 70%, #333333 100%);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.screw::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 2px;
+    background-color: #333333;
+}
+
+.screw.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.screw.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.screw.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.screw.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Central Logo */
+.central-logo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+}
+
+.logo-circle {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-circle.outer {
+    width: 80px;
+    height: 80px;
+    background-color: #cc3333;
+    box-shadow: 0 0 10px rgba(204, 51, 51, 0.5);
+}
+
+.logo-circle.middle {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6600;
+}
+
+.logo-circle.inner {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #0033cc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0033cc;
+    color: #ffffff;
+    transform: translateX(-5px);
+}
+
+/* Pathway Title */
+.pathway-title {
+    text-align: center;
+    margin: 100px 0 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Module Sections */
+.module-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.module-section.core-nav,
+.module-section.student-features,
+.module-section.learning-modes,
+.module-section.top-nav,
+.module-section.learning-modes-medical {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+/* Module Buttons */
+.module-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-btn:hover {
+    background-color: #0033cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 51, 204, 0.5);
+}
+
+.module-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Accent Buttons (Yellow) */
+.module-btn.accent-btn {
+    background-color: #ffcc00;
+    color: #000000;
+    border-color: #ff9900;
+}
+
+.module-btn.accent-btn:hover {
+    background-color: #ff9900;
+    color: #ffffff;
+}
+
+/* Right Panel */
+.right-panel {
+    position: absolute;
+    top: 150px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.measurement {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Main Content Grid */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.module-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666666;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000000;
+}
+
+#modalTitle {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #0033cc;
+}
+
+#modalDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .right-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .main-content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .pathway-btn {
+        padding: 30px 40px;
+        font-size: 1.2rem;
+    }
+
+    .pathway-title {
+        font-size: 1.5rem;
+        margin: 80px 0 20px;
+    }
+
+    .pathway-container {
+        padding: 20px;
+    }
+
+    .main-content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .module-btn {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+
+    .central-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-circle.outer {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-circle.middle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-circle.inner {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pathway-buttons {
+        flex-direction: column;
+    }
+
+    .pathway-btn {
+        width: 100%;
+    }
+
+    .main-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-shapes {
+        gap: 15px;
+    }
+
+    .shape {
+        width: 30px;
+        height: 30px;
+    }
+
+    .shape.triangle {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 30px solid #ff6600;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.module-btn:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

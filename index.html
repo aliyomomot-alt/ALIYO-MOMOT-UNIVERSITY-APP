@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIYO MOMOT UNIVERSITY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage" class="page active">
+        <header class="header">
+            <div class="header-shapes">
+                <div class="shape triangle"></div>
+                <div class="shape square"></div>
+                <div class="shape circle"></div>
+                <div class="shape pentagon"></div>
+            </div>
+            <h1 class="main-title">ALIYO MOMOT UNIVERSITY</h1>
+            <p class="subtitle">CREATED BY ALIYO MOMOT</p>
+        </header>
+
+        <div class="pathway-selection">
+            <h2>Select Your Pathway</h2>
+            <div class="pathway-buttons">
+                <button class="pathway-btn engineering-btn" onclick="showPathway('engineering')">
+                    <span>ALIYO MOMOT</span>
+                    <span>ENGINEERING PATHWAY</span>
+                    <span>UNIVERSITY</span>
+                </button>
+                <button class="pathway-btn medical-btn" onclick="showPathway('medical')">
+                    <span>ALIYO MOMOT</span>
+                    <span>MEDICAL PATHWAY</span>
+                    <span>UNIVERSITY</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engineering Pathway -->
+    <div id="engineeringPage" class="page pathway-page">
+        <div class="pathway-container">
+            <div class="screw top-left"></div>
+            <div class="screw top-right"></div>
+            <div class="screw bottom-left"></div>
+            <div class="screw bottom-right"></div>
+
+            <div class="central-logo">
+                <div class="logo-circle outer"></div>
+                <div class="logo-circle middle"></div>
+                <div class="logo-circle inner"></div>
+            </div>
+
+            <button class="back-btn" onclick="showLanding()">← Back to Pathways</button>
+
+            <h2 class="pathway-title">ALIYO MOMOT ENGINEERING PATHWAY UNIVERSITY</h2>
+
+            <!-- Core Navigation -->
+            <div class="module-section core-nav">
+                <button class="module-btn" onclick="showModule('ISTIDI')">ISTIDI</button>
+                <button class="module-btn" onclick="showModule('MESHY CLOUD')">MESHY CLOUD</button>
+                <button class="module-btn" onclick="showModule('MIND INTERACTION')">MIND INTERACTION</button>
+                <button class="module-btn" onclick="showModule('IQ ENHANCER')">IQ ENHANCER</button>
+                <button class="module-btn" onclick="showModule('IPERCEPTION CLASSES')">IPERCEPTION CLASSES</button>
+                <button class="module-btn" onclick="showModule('ii8D')">ii8D</button>
+            </div>
+
+            <!-- Student Features -->
+            <div class="module-section student-features">
+                <button class="module-btn" onclick="showModule('STUDENT Ai')">STUDENT Ai</button>
+                <button class="module-btn" onclick="showModule('ADMISSION')">ADMISSION</button>
+                <button class="module-btn" onclick="showModule('SCHOOL PASSWORD')">SCHOOL PASSWORD</button>
+                <button class="module-btn" onclick="showModule('ADMITTED YEAR')">ADMITTED YEAR</button>
+                <button class="module-btn" onclick="showModule('PC SYNC')">PC SYNC</button>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="module-section right-panel">
+                <button class="module-btn accent-btn" onclick="showModule('iCREATE')">iCREATE</button>
+                <button class="module-btn accent-btn" onclick="showModule('iiREC')">iiREC</button>
+                <button class="module-btn accent-btn" onclick="showModule('PATHWAY iCLOUD')">PATHWAY iCLOUD</button>
+                <div class="measurement">0,70m</div>
+            </div>
+
+            <!-- Learning Modes -->
+            <div class="module-section learning-modes">
+                <button class="module-btn" onclick="showModule('HOME-DISTANCE-LEARNING-Ai')">HOME-DISTANCE-LEARNING-Ai</button>
+                <button class="module-btn" onclick="showModule('HOME-LIVE-BLENDED-ONLINE-Ai')">HOME-LIVE-BLENDED-ONLINE-Ai</button>
+                <button class="module-btn" onclick="showModule('CLASSROOM-iTRANSLATER-Ai')">CLASSROOM-iTRANSLATER-Ai</button>
+                <button class="module-btn" onclick="showModule('iPERCEPTION-CLASSROOM-CLASSES-Ai')">iPERCEPTION-CLASSROOM-CLASSES-Ai</button>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-content-grid">
+                <!-- Course Modules (Left Column) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('COURSE Ai')">COURSE Ai</button>
+                    <button class="module-btn" onclick="showModule('PHYSICS LAB Ai')">PHYSICS LAB Ai</button>
+                    <button class="module-btn" onclick="showModule('CHEMISTRY LAB Ai')">CHEMISTRY LAB Ai</button>
+                    <button class="module-btn" onclick="showModule('MATHEMATICS Ai')">MATHEMATICS Ai</button>
+                    <button class="module-btn" onclick="showModule('CLASSROOM Ai')">CLASSROOM Ai</button>
+                </div>
+
+                <!-- Assessment Tools (Center-Left) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('iPERCEPTION CLASS')">iPERCEPTION CLASS</button>
+                    <button class="module-btn" onclick="showModule('MODULES Ai')">MODULES Ai</button>
+                    <button class="module-btn" onclick="showModule('ASSESSMENT Ai')">ASSESSMENT Ai</button>
+                    <button class="module-btn" onclick="showModule('EXAMS Ai')">EXAMS Ai</button>
+                    <button class="module-btn" onclick="showModule('iLECTURER Ai')">iLECTURER Ai</button>
+                </div>
+
+                <!-- Online Tools (Center) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('CLASSES iTRANSLATOR Ai')">CLASSES iTRANSLATOR Ai</button>
+                    <button class="module-btn" onclick="showModule('ONLINE iCORRELATION CLASSES Ai')">ONLINE iCORRELATION CLASSES Ai</button>
+                    <button class="module-btn" onclick="showModule('ENGINEERING MODELS Ai')">ENGINEERING MODELS Ai</button>
+                    <button class="module-btn" onclick="showModule('ENGINEERING LIBRARY Ai')">ENGINEERING LIBRARY Ai</button>
+                    <button class="module-btn" onclick="showModule('DATABASE Ai')">DATABASE Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 1 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('NEW AGE PHYSICS Ai')">NEW AGE PHYSICS Ai</button>
+                    <button class="module-btn" onclick="showModule('NEW AGE ENGINEERING')">NEW AGE ENGINEERING</button>
+                    <button class="module-btn" onclick="showModule('CLASS iTRANSLATER Ai')">CLASS iTRANSLATER Ai</button>
+                    <button class="module-btn" onclick="showModule('GRADING Ai')">GRADING Ai</button>
+                    <button class="module-btn" onclick="showModule('CAFETARIA Ai')">CAFETARIA Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 2 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('HALO RAUS Ai')">HALO RAUS Ai</button>
+                    <button class="module-btn" onclick="showModule('COMMON ROOM Ai')">COMMON ROOM Ai</button>
+                    <button class="module-btn" onclick="showModule('TUTORIALHELPER Ai')">TUTORIALHELPER Ai</button>
+                    <button class="module-btn" onclick="showModule('REGISTRATION Ai')">REGISTRATION Ai</button>
+                    <button class="module-btn" onclick="showModule('iPAY Ai')">iPAY Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 3 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('ENGINEERING GAMES')">ENGINEERING GAMES</button>
+                    <button class="module-btn" onclick="showModule('ENGINEERING LAWS')">ENGINEERING LAWS</button>
+                    <button class="module-btn" onclick="showModule('TEXTBOOKS Ai')">TEXTBOOKS Ai</button>
+                    <button class="module-btn" onclick="showModule('STORE Ai')">STORE Ai</button>
+                    <button class="module-btn" onclick="showModule('LANGUAGES Ai')">LANGUAGES Ai</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Pathway -->
+    <div id="medicalPage" class="page pathway-page">
+        <div class="pathway-container">
+            <div class="screw top-left"></div>
+            <div class="screw top-right"></div>
+            <div class="screw bottom-left"></div>
+            <div class="screw bottom-right"></div>
+
+            <div class="central-logo">
+                <div class="logo-circle outer"></div>
+                <div class="logo-circle middle"></div>
+                <div class="logo-circle inner"></div>
+            </div>
+
+            <button class="back-btn" onclick="showLanding()">← Back to Pathways</button>
+
+            <h2 class="pathway-title">ALIYO MOMOT MEDICAL PATHWAY UNIVERSITY</h2>
+
+            <!-- Top Navigation -->
+            <div class="module-section top-nav">
+                <button class="module-btn" onclick="showModule('DICTIONARY-Ai')">DICTIONARY-Ai</button>
+                <button class="module-btn" onclick="showModule('GEANEATOLOGY-Ai')">GEANEATOLOGY-Ai</button>
+                <button class="module-btn" onclick="showModule('NOTEBOOK-Ai')">NOTEBOOK-Ai</button>
+                <button class="module-btn" onclick="showModule('BOOKS-Ai')">BOOKS-Ai</button>
+                <button class="module-btn" onclick="showModule('STORE-Ai')">STORE-Ai</button>
+                <button class="module-btn" onclick="showModule('TUTORIAL-HELPER-Ai')">TUTORIAL-HELPER-Ai</button>
+                <button class="module-btn" onclick="showModule('STAFF-EXAMS-Ai')">STAFF-EXAMS-Ai</button>
+                <button class="module-btn" onclick="showModule('CONVO-ROOM-Ai')">CONVO-ROOM-Ai</button>
+                <button class="module-btn" onclick="showModule('DIARY-ALUBIC-Ai')">DIARY-ALUBIC-Ai</button>
+                <button class="module-btn" onclick="showModule('DATABASE-Ai')">DATABASE-Ai</button>
+                <button class="module-btn" onclick="showModule('CERTIFICATES-Ai')">CERTIFICATES-Ai</button>
+            </div>
+
+            <!-- Core Navigation -->
+            <div class="module-section core-nav">
+                <button class="module-btn" onclick="showModule('ISTIDI')">ISTIDI</button>
+                <button class="module-btn" onclick="showModule('MESHY CLOUD')">MESHY CLOUD</button>
+                <button class="module-btn" onclick="showModule('MIND INTERACTION')">MIND INTERACTION</button>
+                <button class="module-btn" onclick="showModule('MS MODULAR iSTUDY')">MS MODULAR iSTUDY</button>
+                <button class="module-btn" onclick="showModule('ii8D')">ii8D</button>
+            </div>
+
+            <!-- Learning Modes -->
+            <div class="module-section learning-modes-medical">
+                <button class="module-btn" onclick="showModule('HOME-LEARNING-Ai')">HOME-LEARNING-Ai</button>
+                <button class="module-btn" onclick="showModule('CLASSROOM-LEARNING-Ai')">CLASSROOM-LEARNING-Ai</button>
+                <button class="module-btn" onclick="showModule('ONLINE-BLEND-Ai')">ONLINE-BLEND-Ai</button>
+                <button class="module-btn" onclick="showModule('LANGUAGES-Ai')">LANGUAGES-Ai</button>
+                <button class="module-btn" onclick="showModule('iTRANSLATOR-Ai')">iTRANSLATOR-Ai</button>
+                <button class="module-btn" onclick="showModule('ASSIGNMENTS-Ai')">ASSIGNMENTS-Ai</button>
+                <button class="module-btn" onclick="showModule('ANTIPLAGEriRER-Ai')">ANTIPLAGEriRER-Ai</button>
+                <button class="module-btn" onclick="showModule('EXAMINER-Ai')">EXAMINER-Ai</button>
+                <button class="module-btn" onclick="showModule('iPAY-Ai')">iPAY-Ai</button>
+                <button class="module-btn" onclick="showModule('PATHWAY-PC-SYNC-Ai')">PATHWAY-PC-SYNC-Ai</button>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-content-grid">
+                <!-- Course Modules (Left Side) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('COURSES Ai')">COURSES Ai</button>
+                    <button class="module-btn" onclick="showModule('BASIC MEDICAL Ai')">BASIC MEDICAL Ai</button>
+                    <button class="module-btn" onclick="showModule('ROTATION LIVE Ai')">ROTATION LIVE Ai</button>
+                    <button class="module-btn" onclick="showModule('VIRTUAL ROTATION Ai')">VIRTUAL ROTATION Ai</button>
+                    <button class="module-btn" onclick="showModule('MODULES Ai')">MODULES Ai</button>
+                </div>
+
+                <!-- Assessment Tools (Center-Left) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('ASSESSMENT Ai')">ASSESSMENT Ai</button>
+                    <button class="module-btn" onclick="showModule('EXAMS Ai')">EXAMS Ai</button>
+                    <button class="module-btn" onclick="showModule('iVALUATOR Ai')">iVALUATOR Ai</button>
+                    <button class="module-btn" onclick="showModule('iLECTURER Ai')">iLECTURER Ai</button>
+                    <button class="module-btn" onclick="showModule('iREVISION Ai')">iREVISION Ai</button>
+                </div>
+
+                <!-- Medical Specializations (Center) -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('MBBS Ai')">MBBS Ai</button>
+                    <button class="module-btn" onclick="showModule('MD Ai')">MD Ai</button>
+                    <button class="module-btn" onclick="showModule('MRES Ai')">MRES Ai</button>
+                    <button class="module-btn" onclick="showModule('DDM Ai')">DDM Ai</button>
+                    <button class="module-btn" onclick="showModule('PHARM D Ai')">PHARM D Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 1 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('DVM Ai')">DVM Ai</button>
+                    <button class="module-btn" onclick="showModule('LAB Ai')">LAB Ai</button>
+                    <button class="module-btn" onclick="showModule('ONLINE Ai')">ONLINE Ai</button>
+                    <button class="module-btn" onclick="showModule('INSTANT LEARNING Ai')">INSTANT LEARNING Ai</button>
+                    <button class="module-btn" onclick="showModule('CLASSES iTRANSLATER Ai')">CLASSES iTRANSLATER Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 2 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('IQ ENHANCER Ai')">IQ ENHANCER Ai</button>
+                    <button class="module-btn" onclick="showModule('GRADES Ai')">GRADES Ai</button>
+                    <button class="module-btn" onclick="showModule('PATIENT INTERACTION')">PATIENT INTERACTION</button>
+                    <button class="module-btn" onclick="showModule('DAILY LOGBOOK Ai')">DAILY LOGBOOK Ai</button>
+                    <button class="module-btn" onclick="showModule('LIBRARY Ai')">LIBRARY Ai</button>
+                </div>
+
+                <!-- Advanced Features Column 3 -->
+                <div class="module-column">
+                    <button class="module-btn" onclick="showModule('CAFETARIA Ai')">CAFETARIA Ai</button>
+                    <button class="module-btn" onclick="showModule('ONLINE GRADUATION')">ONLINE GRADUATION</button>
+                    <button class="module-btn" onclick="showModule('CPD FELLOW Ai')">CPD FELLOW Ai</button>
+                    <button class="module-btn" onclick="showModule('LICENSING EXAMS Ai')">LICENSING EXAMS Ai</button>
+                    <button class="module-btn" onclick="showModule('SIMULATION Ai')">SIMULATION Ai</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Module Details -->
+    <div id="moduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
